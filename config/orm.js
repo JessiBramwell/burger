@@ -1,5 +1,7 @@
+// DEPENDENCIES
 const connection = require("../config/connection.js");
 
+// AN ARRAY OF QUESTION MARKS THE SAME LENGTH AS THE NUMBER OF QUERY VARIABLES
 function printQuestionMarks(num) {
   var arr = [];
   for (var i = 0; i < num; i++) {
@@ -8,6 +10,7 @@ function printQuestionMarks(num) {
   return arr.toString();
 }
 
+// ALTERS AN OBJECT TO BE VALID SQL
 function objToSql(obj) {
   var arr = [];
 
@@ -24,6 +27,7 @@ function objToSql(obj) {
   return arr.toString();
 }
 
+// ORM OBJECT
 const orm = {
   all: function (table, callback) {
     let sql = "SELECT * FROM " + table + ";"

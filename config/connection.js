@@ -1,8 +1,11 @@
+// DEPENDENCIES
 const mysql = require("mysql");
 var connection;
 
+// JAWSDB CONNECTION FOR HEROKU
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
+  // LOCAL CONNECTION
 } else {
   connection = mysql.createConnection({
     host: process.env.DB_HOST,
@@ -12,7 +15,6 @@ if (process.env.JAWSDB_URL) {
     database: process.env.DB_NAME,
   });
 }
-console.log(process.env.DB_HOST);
 
 connection.connect();
 

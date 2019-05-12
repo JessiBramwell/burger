@@ -1,5 +1,6 @@
 $(function () {
 
+  // UPDATE EATEN STATUS ON CLICK
   $(".update-eaten").on("click", function (e) {
     let id = $(this).data("id");
     let eaten = $(this).data("eaten_update");
@@ -19,6 +20,7 @@ $(function () {
     );
   });
 
+  // ADD ITEM ON FORM SUBMIT
   $(".add-form").on("submit", function (e) {
     e.preventDefault();
 
@@ -37,6 +39,7 @@ $(function () {
     );
   });
 
+  // DELETE ITEM ON CLICK
   $(".delete-item").on("click", function (e) {
     let id = $(this).data("id");
 

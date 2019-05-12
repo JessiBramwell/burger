@@ -1,5 +1,7 @@
+// DEPENDENCIES
 var orm = require("../config/orm.js");
 
+// burger object
 var burger = {
   all: function (callback) {
     orm.all("burgers", function (res) {
