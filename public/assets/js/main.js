@@ -2,7 +2,7 @@ $(function () {
 
   $(".update-eaten").on("click", function (e) {
     let id = $(this).data("id");
-    let eaten = $(this).data("eaten");
+    let eaten = $(this).data("eaten_update");
 
     let update = {
       eaten: eaten
@@ -21,7 +21,7 @@ $(function () {
 
   $(".add-form").on("submit", function (e) {
     e.preventDefault();
- 
+
     let newBurger = {
       name: $("#name").val().trim()
     };
