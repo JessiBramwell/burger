@@ -1,0 +1,13 @@
+<li class="list-group-item">
+
+  {{#if eat}}
+  <button class="update-eaten btn btn-primary btn-sm mr-3" data-id="{{id}}" data-eaten_update="{{eat}}">Eat It</button>
+  {{/if}}
+
+  {{burger_name}}
+
+  <button type="button" class="close delete-item" data-id="{{id}}" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+
+</li>
